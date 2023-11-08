@@ -1168,6 +1168,7 @@ section.insta-post-section{
 }
 
 .footer-bottom{
+				max-width: 540px;
     text-align: center;
     background-color: var(--dk-red-color);
     transform: skewX(-15deg);
