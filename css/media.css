@@ -1,0 +1,180 @@
+@media screen and (max-width:700px){
+/*======Top Header Link============================*/
+
+.container{
+    max-width: 540px;
+}
+
+.top-inner .top-logo-center {
+    width: 231px;
+    padding: 18px 0;
+}
+.right-link.social-links{
+    display: none;
+}
+
+.top-links {
+    justify-content: center;
+}
+
+.top-links .left-link li {
+    margin-right: 30px;
+    font-size: 9px;
+}
+
+.inner-header .container nav {
+    justify-content: center;
+}
+
+nav .fas{
+    margin: 0 10px;
+}
+.inner-header nav i.fa-bars, .inner-header nav i.fa-search {
+    padding: 12px 15px;
+    font-size: 14px;
+}
+.inner-header .container nav ul{
+    display: none;
+}
+/*======End of Top Header Link=====================*/
+.section-padding{
+    padding: 50px 25px;
+}
+.hero-section {
+    background-image: url('../img/hero.webp');
+    height: 100%;
+}
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-section .trending-box-top {
+    border: 2px solid #fff;
+    position: static;
+    transform: unset;
+}
+.hero-section .hero-content {
+    max-width: 550px;
+    padding-top: 0;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    line-height: 30px;
+}
+
+.hero-section label {
+    font-size: 14px;
+    padding: 4px 7px 4px 12px;
+}
+
+.trending-col .trending-info a {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-family: var(--sinzel-family);
+}
+/*======Preview Section Design=====================*/
+
+.preview-section .preview-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.preview-section .preview-col{
+    flex-basis: calc(100%);
+}
+/*======End Of Preview Section Design==============*/
+
+.news-container {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+.news-container .news-info a {
+    font-size: 18px;
+}
+.box-container,
+.video-section .section-title,
+.news-container, .insta-container {
+   flex-direction: column;
+}
+
+.video-section .videos-row {
+    flex-direction: column;
+    height: 600px;
+}
+.video-section .video-info h5 {
+    font-size: 16px;
+}
+
+.video-col .play-box {
+    width: 90px;
+    height: 55px;
+}
+.video-col .play-box i {
+    font-size: 28px;
+}
+.video-section .video-info {
+    bottom: 5px;
+}
+
+.insta-rows .insta-col {
+    flex-direction: column;
+}
+
+.ratting-info {
+    padding-top: 17px;
+}
+
+.footer-row {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-row ul{
+    margin: 30px 0;
+}
+.footer-bottom{
+    margin-top: 30px;
+}
+
+.footer-section {
+    padding: 10px 0 30px;
+}
+.videos-row .video-col .video-info {
+    width:80%;
+}
+.videos-row:last-child .video-col .video-info {
+    width: 60%;
+}
+
+.title-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-col .tags-container {
+    justify-content: center;
+}
+
+}
+
+
+/*======Header Section Design======================*/
+/*======Navigation bar Section Design==============*/
+/*======End of Navigation bar Section Design=======*/
+/*======End of Header Section Design===============*/
+/*======Hero Section Design========================*/
+/*======End of Hero Section Design=================*/
+/*======Videos Section Design======================*/
+/*======End Of Videos Section Design===============*/
+/*======Instagram post Section Design==============*/
+/*======End Of Instagram post Section Design=======*/
+/*======Footer Section Design======================*/
+/*======End Of Footer Section Design===============*/

@@ -1,0 +1,1178 @@
+/*==============Google font link============================*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&display=swap');
+
+/*==============Basic CSS Design============================*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+dl,
+ol,
+li {
+    list-style: none;
+    /* padding: 0 !important;
+    margin: 0 !important; */
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--sinzel-family);
+    color: var(--white-color);
+}
+
+/*==============Vsriables===================================*/
+:root {
+    --dark-color: #0D0D0D;
+    --light-red-color: #A81D1D;
+    --red-color: #9E0303;
+    --dk-red-color: #C20000;
+    --white-color: #FFFFFF;
+    --red-opacity-30: rgba(194, 0, 0, 0.3);
+    --transform: skewX(15deg);
+    --montserrat-family: 'Montserrat', sans-serif;
+    --sinzel-family: 'Cinzel', serif;;
+    --grey-text-color: #c4c4c4;
+    --light-text-color: #eaeaea;
+    --bg-dark-2: #0d0d0d;
+}
+
+/*==============Reuseable css Selector======================*/
+.text-red {
+    color: var(--dk-red-color);
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.title-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.title-row i{
+    font-size: 25px;
+    margin-left: 10px;
+    color: var(--grey-text-color);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.title-row i:hover{
+    color: var(--white-color);
+}
+.section-title h5 {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding-left: 16px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title h5::after {
+    position: absolute;
+    width: 14px;
+    height: 23px;
+    content: '';
+    background: var(--dk-red-color);
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    transform: skewX(-15deg);
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-padding{
+    padding: 100px 50px;
+}
+
+
+/*==============Top Header Link=============================*/
+
+.top-inner {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 13px 0;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-links .left-link i,
+.social-links i {
+    font-size: 14px;
+    color: var(--light-text-color);
+    margin-right: 8px;
+    transition: all 0.3s;
+}
+
+.top-links .left-link li {
+    position: relative;
+    margin-right: 30px;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--grey-text-color);
+}
+
+.top-links .left-link li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: var(--grey-text-color);
+    width: 2px;
+    height: 100%;
+    transform: rotate(15deg);
+}
+
+.top-links .left-link li:nth-child(1)::before {
+    display: none;
+}
+
+.top-links .left-link li:hover i {
+    transform: scale(1.2);
+}
+
+.top-links .left-link span {
+    color: var(--grey-text-color);
+}
+
+.top-links .social-links li {
+    margin-left: 9px;
+    display: inline;
+}
+
+.top-inner .top-logo-center {
+    width: 260px;
+    margin: 0 auto;
+    padding: 44px 0;
+}
+
+.top-inner .top-logo-center img {
+    display: block;
+    width: 100%;
+}
+/*==============End of Top Header Link======================*/
+
+
+
+/*==============Header Section Design=======================*/
+/*==============Navigation bar Section Design===============*/
+.inner-header{
+    background: var(--red-color);
+    padding: 16px 0;
+}
+.inner-header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-header nav ul{
+    flex: 1;
+    text-align: center;
+}
+
+.inner-header nav ul li{
+    display: inline-block;
+    margin: 0 4px 0 0;
+    transform: skewX(-15deg);
+}
+.inner-header nav ul li a{
+    color: var(--white-color);
+    padding: 17px 15px 13px 30px;
+    background: var(--light-red-color);
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.inner-header nav ul li a:hover,
+.inner-header nav ul li a.active{
+    background: var(--dk-red-color);
+}
+
+.inner-header nav i.fa-bars, .inner-header nav i.fa-search{
+    background: var(--light-red-color);
+    padding: 17px 22px;
+    transform: skewX(-15deg);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.inner-header .container nav{
+    position: relative;
+}
+
+.inner-header .platform-container{
+    background-color: var(--dark-color);
+    position: absolute;
+    top: 70px;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    transition: all 0.5s;
+    padding: 30px;
+    display: none;
+}
+
+/* nav ul li a:hover .inner-header .platform-container{
+    display: block !important;
+} */
+
+.platform-links a{
+    margin-right: 30px;
+    color: var(--white-color);
+    font-size:16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    font-family: serif;
+    text-transform: uppercase;
+}
+
+.platform-links a::after{
+    content: '';
+    background: var(--light-text-color);
+    width: 2px ;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    transform: rotate(15deg);
+}
+
+.platform-links a:nth-child(4):after{
+    display: none;
+}
+
+
+.platform-links a:hover{
+    color: var(--dk-red-color);
+}
+
+.platform-container .platform-box{
+    color: var(--white-color);
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.platform-box .platform-title-link a{
+    font-size: 14px;
+    color: var(--white-color);
+    margin: 15px 0;
+    display: block;
+}
+
+.platform-box img{
+    height: 100%;
+}
+
+.platform-container .platform-box .platform-footer{
+    color: var(--grey-text-color);
+    font-size: 12px;
+}
+.platform-box .platform-footer i{
+    margin: 0 8px;
+}
+
+.platform-box .platform-footer span{
+    margin-right: 15px;
+    position: relative;
+    font-style: italic;
+}
+.platform-box .platform-footer span::after{
+    position: absolute;
+    content: '';
+    background-color: var(--grey-text-color);
+    top: 0;
+    left: -6px;
+    transform: rotate(15deg);
+    width: 2px;
+    height: 100%;
+}
+
+.platform-box .platform-footer span:nth-child(1):after{
+    display: none;
+}
+/*==============End of Navigation bar Section Design========*/
+
+/*==============End of Header Section Design================*/
+
+
+/*==============Hero Section Design=========================*/
+.hero-section{
+    background-image: url('../img/hero.webp');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    color: var(--white-color);
+    position: relative;
+}
+
+.hero-section .hero-content{
+    max-width: 550px;
+    padding-top: 160px;
+    margin-bottom: 30px;
+}
+
+.hero-section label{
+    width: 100%;
+    background: var(--red-opacity-30);
+    font-size: 16px;
+    padding: 10px 0;
+    transform: skewX(-15deg);
+    display: inline-block;
+    width: 125px;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+.hero-section h1{
+    font-size: 30px;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+
+.hero-section .hero-post-info{
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.hero-section .hero-post-info img{
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.hero-section .hero-post-info div{
+    color: var(--grey-text-color);
+}
+
+.hero-section .hero-post-info div span{
+    position: relative;
+    font-size: 14px;
+    font-style: italic;
+    margin-right: 30px;
+}
+.hero-section .hero-post-info div span::after{
+    content: '';
+    position: absolute;
+    background-color: var(--grey-text-color);
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: -20px;
+    transform: rotate(15deg);
+}
+
+.hero-section .hero-post-info div small{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.hero-section .trending-box-top{
+ border: 2px solid #fff;
+ position: absolute;
+ right: 15%;
+ width: 400px;
+ top: 50%;
+ transform: translateY(-50%);
+ padding: 20px;
+ background: var(--dark-color);
+}
+
+
+.trending-footer{
+    color: #666666;
+    font-size: 12px;
+}
+
+.trending-col .trending-info a{
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 20px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 12px;
+    font-family: serif;
+}
+
+.trending-col .trending-info a:hover{
+    color: var(--dk-red-color);
+}
+
+.trending-footer i{
+    margin: 0 8px;
+}
+
+.trending-footer span{
+    margin-right: 15px;
+    position: relative;
+    font-style: italic;
+}
+.trending-footer span::after{
+    position: absolute;
+    content: '';
+    background-color: var(--grey-text-color);
+    top: 0;
+    left: -6px;
+    transform: rotate(15deg);
+    width: 2px;
+    height: 100%;
+}
+
+.trending-footer span:nth-child(1):after{
+    display: none;
+}
+
+.trending-col{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/*==============End of Hero Section Design==================*/
+/*==============Preview Section Design======================*/
+.preview-section{
+    background-color: #080808;
+}
+.preview-section .preview-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.preview-section .preview-col{
+    position: relative;
+    flex-basis: calc(20% -30px);
+}
+.preview-section .preview-img{
+    width: 100%;
+}
+.preview-section .preview-img img{
+    width: 100%;
+}
+
+.preview-section .preview-info{
+    padding: 25px 0 0;
+}
+
+.preview-section .preview-info h4{
+    margin-bottom: 5px;
+}
+
+.preview-section .preview-info h4 a{
+    color: var(--white-color);transition: color 0.3s;
+}
+.preview-section .preview-info h4 a:hover{
+    color: var(--dk-red-color);
+}
+.preview-section .preview-footer i{
+    font-size: 12px;
+    margin-right: 6px;
+}
+.preview-section .preview-footer span{
+    color: #666666;
+    margin-right: 22px;
+    position: relative;
+}
+
+span.after::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #666666;
+    right: -14px;
+    transform: rotate(15deg);
+}
+
+.next-prev-indicator-btns{
+    position: relative;
+    padding: 4px 0;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.next-prev-indicator-btns .dot-btn{
+    width: 10px;
+    height: 10px;
+    background: var(--light-text-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.next-prev-indicator-btns .dot-btn.active{
+    background: var(--dk-red-color);
+}
+
+.preview-section .review-circle{
+    border: 3px solid var(--dk-red-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+}
+/*==============End Of Preview Section Design===============*/
+
+
+/*==============News Section Design=======================*/
+
+section.news-section{
+    background-color: #101010 ;
+
+}
+section .title-row ul{
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+.title-row ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.title-row ul li a{
+    color: #c4c4c4;
+    display: block;
+    font-size: 14px;
+    font-family: var(--montserrat-family);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.title-row ul li a:hover{
+    color: var(--dk-red-color);
+}
+
+
+ .title-row ul li a.active{
+    color: var(--dk-red-color);
+    font-weight: 500;
+}
+
+.news-container{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.news-container .news-left{
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.news-container .news-right{
+    flex-basis: 35%;
+}
+
+.news-container .news-img{
+    width: 100%;
+    background-image: url('../img/news-1.jpg');
+    height: 540px;
+    margin-bottom: 40px;
+    position: relative;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.news-container .review{
+    background: rgba(194, 0, 0, 0.5);
+    padding: 2px 7px 2px 12px;
+    display: inline-block;
+    transform: skewX(-15deg);
+    margin-bottom: 10px;
+}
+
+.news-container .news-img img{
+    width: 100%;
+}
+.news-container .news-info{
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    width: 100%;
+    max-width: 85%;
+}
+
+.news-container .news-info a{
+    color: var(--white-color);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 32px;
+    margin-bottom: 10px;
+    display: block;
+}
+.news-container .news-info .news-footer{
+    font-family: var(--montserrat-family);
+}
+.news-container .news-info .news-footer span{
+    font-size: 13px;
+    color: #666666;
+    margin: 8px;
+    position: relative;
+}
+
+
+
+
+.news-container .news-info .news-footer span.after::after{
+    width: 1px;
+    height: 100%;
+    background-color: #666666;
+    content: '';
+    top: 1px;
+    right: -11px;
+    transform: rotate(15deg);
+    position: absolute;
+}
+
+.news-container .news-info .news-footer i{
+    margin-right: 6px;
+}
+
+.box-container{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.news-container .box{
+    flex-basis: 33.33%;
+    position: relative;
+}
+.small-box{
+    position: relative;
+    overflow: hidden;
+}
+
+.small-box .review{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.news-container .box img{
+    width: 100%;
+}
+.news-container .box-link a{
+    display: block;
+    font-size: 16px;
+    color: var(--white-color);
+    font-weight: 700;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.news-container .box-link a:hover{
+    color: var(--dk-red-color);
+}
+
+.box-footer span{
+    font-size: 12px;
+    color: #666666;
+    position: relative;
+    margin-right: 16px;
+}
+
+.box-footer span i{
+    margin-right: 4px;
+}
+
+.box-footer span.after::after{
+ right: -11px;
+ top: 0px;
+}
+
+.news-right ul{
+    margin-bottom: 55px;
+}
+
+.news-right ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #252525;
+    transform: skewX(-15deg);
+    transition: all 0.3s;
+    margin-bottom: 15px;
+    padding-right: 18px;
+    font-size: 14px;
+    font-family: var(--montserrat-family);
+    cursor: pointer;
+}
+
+.news-right ul li:hover{
+    border: 2px solid #40c4ff;
+}
+.news-right ul li:hover i{
+    background-color: #40c4ff;
+}
+
+.news-right ul li i{
+    font-size: 16px;
+    margin-right: 6px;
+    background: #252525;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+
+.news-right ul li .flex-1{
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+/*==============End Of News Section Design===============*/
+/*==============Videos Section Design=======================*/
+
+.video-section{
+    background-color: #0D0D0D;
+}
+.video-section .section-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.video-section .section-title ul{
+    flex: 1;
+    text-align: right;
+}
+.video-section .section-title ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.video-section .section-title ul li a{
+    color: var(--white-color);
+    font-size: 14px;
+    font-family: var(--montserrat-family);
+    font-weight: 300;
+    transition: all 0.3s;
+}
+
+.video-section .section-title ul li a:hover,
+.video-section .section-title ul li a.active{
+    color: var(--dk-red-color);
+}
+.video-section .section-title  i{
+    font-size: 25px;
+    margin-left: 10px;
+    color: var(--grey-text-color);
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 22px;
+}
+
+.video-section .videos-row{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.video-section .video-col{
+    flex-basis: 50%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+
+.video-col.video-col-3,
+.video-col.video-col-4,
+.video-col.video-col-5{
+    height: 300px;
+}
+
+.video-col .play-box{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 3px solid var(--dk-red-color);
+   width: 120px;
+   height: 60px;
+   display: flex;
+   border-radius: 10px;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.video-col .play-box:hover i{
+    color: var(--white-color);
+}
+
+.video-col .play-box:hover{
+    background: var(--dk-red-color);
+}
+
+.video-col .play-box i{
+    color: var(--dk-red-color);
+    font-size: 35px;
+   transition: all 0.3s;
+
+}
+
+.video-section .video-info{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+}
+
+.video-section .video-info h5{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.video-section .video-info ul{
+    display: flex;
+    align-items: center;
+}
+
+.video-info ul li{
+    margin-right: 28px;
+    font-size: 12px;
+    color: var(--grey-text-color);
+    position: relative;
+}
+
+.video-info ul li:nth-child(1):after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--grey-text-color);
+    right: -14px;
+    transform: rotate(15deg);
+}
+
+.video-info ul li i{
+    margin-right: 6px;
+}
+.video-section .videos-row:last-child .video-col h5{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+}
+
+.videos-row:last-child .video-col .video-info{
+    width: 90%;
+}
+/*==============End Of Videos Section Design================*/
+/*==============Instagram post Section Design===============*/
+section.insta-post-section{
+    background-color: #0d0d0d;
+}
+
+.insta-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.insta-container .section-left{
+    flex-basis: 65%;
+    height: 100%;
+}
+.insta-container .insta-rows{
+    margin: 30px 0 0;
+}
+.insta-rows .insta-col{
+    display: flex;
+    gap: 30px;
+}
+
+.insta-rows .insta-col .insta-img{
+    flex-basis: 50%;
+}
+.insta-rows .insta-col .insta-info label.review{
+    display: inline-block;
+    padding: 2px 10px 2px 12px;
+    background: rgba(194, 0, 0, 0.3);
+    -webkit-transform: skewX(-15deg);
+    -ms-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    margin-left: 4px;
+}
+.insta-rows .insta-col .insta-info{
+    flex-basis: 50%;
+    color: var(--white-color);
+}
+
+.insta-rows .insta-col .insta-info p{
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #c4c4c4;
+    font-weight: 400;
+    line-height: 24px;
+    margin:15px 0 15px 0;
+}
+.insta-rows .insta-col .insta-info a{
+    color: var(--white-color);
+    font-size: 20px;
+    line-height: 28px;
+    display: block;
+    margin: 15px 0;
+}
+.section-left .insta-img img{
+    width: 100%;
+}
+
+.section-left ul,
+.ratting-info ul{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.section-left ul li
+,.ratting-info ul li{
+    color: var(--grey-text-color);
+    font-size: 12px;
+}
+
+.insta-container .section-right{
+    flex-basis: 35%;
+}
+
+.insta-container .section-right .insta-pics{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.insta-container .rattings-row{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
+
+
+.insta-container .section-right .insta-pics img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.ratting-col .circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    border: 2px solid ;
+    float: left;
+}
+
+.ratting-col .circle span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ratting-col{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+
+.ratting-info h6 a{
+    font-size: 16px;
+    color: var(--white-color);
+    font-weight: 700;
+    display: block;
+}
+
+.ratting-info{
+    width: 80%;
+    float: right;
+}
+
+.subscribe-row p{
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+.subscribe-row .section-title {
+    margin-bottom: 4px;
+}
+.subscribe-row form{
+    margin-top: 20px;
+}
+
+.subscribe-row form li{
+}
+.subscribe-row form li input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #464646;
+    outline: none;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    transform: skew(-15deg);
+    color: var(--white-color);
+}
+
+.subscribe-row form li input[type="button"]{
+    background-color: var(--dk-red-color);
+    color: var(--white-color);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 700;
+}
+
+.subscribe-row form li input[type="button"]:hover{
+    background: transparent;
+    border: 1px solid var(--dk-red-color);
+}
+
+.steps-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.steps-btns .step{
+    background: #252525;
+    padding: 8px 20px 6px;
+    border: 0;
+    margin: 0 8px 0 0;
+}
+
+.steps-btns .step:last-child i{
+    padding-left: 12px;
+}
+.steps-btns a .step{
+    color: var(--white-color);
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.steps-btns a:hover .step,
+.step.active{
+    background: var(--dk-red-color);
+}
+/*==============End Of Instagram post Section Design========*/
+/*==============Footer Section Design=======================*/
+.footer-section{
+    background-color: #080808;
+}
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-row .footer-col{
+    flex-basis: 33.33%;
+    padding: 0 15px;
+}
+.footer-row .footer-col .footer-logo{
+    width: 60%;
+}
+
+.footer-row .footer-col .footer-logo img{
+    width: 100%;
+}
+
+.footer-row .f-col-1 p{
+    margin: 20px 0 30px;
+}
+
+.footer-col ul.social-links li{
+    display: inline-block;
+    margin-right: 6px;
+    transform: skewX(-15deg);
+
+    
+}
+
+.footer-row ul.social-links li a{
+    background-color: #252525;
+    padding: 8px 12px 6px;
+    transition: all 0.5s;
+}
+
+.footer-row ul.social-links li a:hover{
+    background-color: var(--dk-red-color);
+}
+.footer-row ul.social-links li a i{
+    font-size: 14px;
+}
+
+.footer-col .tags-container{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.footer-col .tags-container p a{
+    background: #252525;
+    padding: 8px 12px 6px;
+    color:var(--white-color);
+    display: block;
+    transform: skewX(-15deg);
+}
+
+.footer-bottom{
+    text-align: center;
+    background-color: var(--dk-red-color);
+    transform: skewX(-15deg);
+    font-weight: 700;
+    padding: 10px 0;
+    font-family: var(--montserrat-family);
+}
+/*==============End Of Footer Section Design================*/
