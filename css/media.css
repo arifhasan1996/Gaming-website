@@ -50,9 +50,9 @@ nav .fas{
     align-items: center;
 }
 .hero-section .trending-box-top {
-    border: 2px solid #fff;
     position: static;
     transform: unset;
+    max-width: 300px;
 }
 .hero-section .hero-content {
     max-width: 550px;
@@ -60,8 +60,18 @@ nav .fas{
     margin-bottom: 30px;
 }
 
+.title-row {
+    justify-content: center;
+}
+
+.subscribe-row p {
+    font-size: 12px;
+    margin: 10px;
+    text-align: center;
+}
+
 .hero-section h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 12px;
     line-height: 30px;
 }
@@ -72,12 +82,19 @@ nav .fas{
 }
 
 .trending-col .trending-info a {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    font-size: 14px;
-    margin-bottom: 6px;
-    font-family: var(--sinzel-family);
+    font-size: 10px;
+    margin-bottom: 12px;
+    line-height: 14px;
+    font-family: var(--montserrat-family);
+}
+
+.trending-footer span{
+   font-size: 10px;
+   margin-right: 6px;
+}
+
+.trending-footer span::after {
+    left: 0;
 }
 /*======Preview Section Design=====================*/
 
@@ -97,7 +114,8 @@ nav .fas{
     justify-content: space-between;
 }
 .news-container .news-info a {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 20px;
 }
 .box-container,
 .video-section .section-title,
@@ -109,8 +127,29 @@ nav .fas{
     flex-direction: column;
     height: 600px;
 }
-.video-section .video-info h5 {
-    font-size: 16px;
+.video-section .video-info h5,
+.video-section .videos-row:last-child .video-col h5 {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.section-left ul, .ratting-info ul {
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.section-left ul li, .ratting-info ul li {
+    color: var(--grey-text-color);
+    font-size: 10px;
+}
+
+.ratting-col .circle {
+    width: 50px;
+    height: 50px;
+}
+
+.ratting-col .circle span {
+    font-size: 14px;
 }
 
 .video-col .play-box {
@@ -145,7 +184,7 @@ nav .fas{
 }
 
 .footer-section {
-    padding: 10px 0 30px;
+    padding: 10px 0 0;
 }
 .videos-row .video-col .video-info {
     width:80%;
@@ -161,6 +200,22 @@ nav .fas{
 
 .footer-col .tags-container {
     justify-content: center;
+}
+
+.footer-row .footer-col .footer-logo{
+    width: 100%;
+}
+
+.footer-row .footer-col .footer-logo img {
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+}
+.footer-p{
+    font-family: var(--montserrat-family);
+    text-align: center;
+    font-size: 12px;
+    margin: 9px 0 14px;
 }
 
 }
